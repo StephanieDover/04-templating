@@ -12,10 +12,18 @@
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
 
     <script id="article-template" type="text/x-handlebars-template">
+      <article data-author="{{author}}" data-category="{{category}}">
+
       <h1>{{title}}</h1>
-      <p>By <strong><a href="{{{authorUrl}}}">{{author}}</a></strong>{{publishedOn}}</p>
+      <div class="byline">By <address>
+      <a href="{{{authorUrl}}}">{{author}}</a></address>Published <time>{{publishedOn}}</time></div>
+      <section class="article-body">
       {{{body}}}
+      <a href="#" class="read-on">Read On</a>
+      </section>
+      </article>
     </script>
+
   </head>
   <body>
     <header class="site-header clearfix">
